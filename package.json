@@ -1,0 +1,44 @@
+{
+  "name": "i18n-compare",
+  "version": "1.0.0",
+  "description": "Generates a summary of differences between two i18n files",
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "clean": "rimraf dist",
+    "dev": "NODE_ENV=development webpack serve",
+    "lint": "eslint src/ --ext .jsx,.js",
+    "test": "yarn lint"
+  },
+  "author": {
+    "name": "Wojciech Maj",
+    "email": "kontakt@wojtekmaj.pl"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "merge-class-names": "^1.1.1",
+    "prop-types": "^15.6.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-markdown": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.2",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.12.0",
+    "eslint-config-wojtekmaj": "^0.5.0",
+    "html-webpack-plugin": "^4.5.0",
+    "less": "^3.12.0",
+    "less-loader": "^7.0.0",
+    "mini-css-extract-plugin": "^1.0.0",
+    "react-refresh": "^0.9.0",
+    "rimraf": "^3.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

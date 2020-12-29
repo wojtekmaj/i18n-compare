@@ -1,0 +1,33 @@
+.InputWrapper {
+  position: relative;
+
+  & > div {
+    &:first-child {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+
+  &__swapButton {
+    position: absolute;
+    top: calc(1.75em + 50%);
+    left: 50%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    transform: translateX(-50%);
+    opacity: 0;
+
+    font-size: 2.4em;
+    line-height: 1;
+    text-align: center;
+
+    transition: ease-in-out 200ms opacity;
+  }
+
+  &:hover {
+    .InputWrapper__swapButton {
+      opacity: 1;
+    }
+  }
+}
