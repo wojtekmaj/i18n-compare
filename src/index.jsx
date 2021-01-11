@@ -3,4 +3,4 @@ import Root from './Root';
 
 import './index.less';
 
-render(<Root />, document.getElementById('react-container'));
+render(<Root />, document.getElementById('react-root'));
