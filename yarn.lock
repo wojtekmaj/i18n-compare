@@ -4496,7 +4496,7 @@ fsevents@^1.2.7:
     eslint-config-wojtekmaj: ^0.5.0
     html-webpack-plugin: ^5.0.0
     less: ^4.0.0
-    less-loader: ^7.0.0
+    less-loader: ^8.0.0
     merge-class-names: ^1.1.1
     mini-css-extract-plugin: ^1.0.0
     prop-types: ^15.6.2
@@ -5254,17 +5254,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"less-loader@npm:^7.0.0":
-  version: 7.0.2
-  resolution: "less-loader@npm:7.0.2"
+"less-loader@npm:^8.0.0":
+  version: 8.1.1
+  resolution: "less-loader@npm:8.1.1"
   dependencies:
     klona: ^2.0.4
-    loader-utils: ^2.0.0
-    schema-utils: ^3.0.0
   peerDependencies:
-    less: ^3.5.0
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: e9e294a02ed7c317349a4c10db45b63550ce15a844b690206c1002caf93c735f3719e00588340be6e2689941f895077ecf5d8609196d6d4110490200976358c0
+    less: ^3.5.0 || ^4.0.0
+    webpack: ^5.0.0
+  checksum: ec465dc8b153282a7f1014f925b71f4e6586af8ed3bb3b2533d471793855822e4236d2f3536cefbc1c132c19d08f7b0bf01bded5b87f2c694f865f13f6957cb5
   languageName: node
   linkType: hard
 
