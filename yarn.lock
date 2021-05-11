@@ -5318,16 +5318,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"line-column@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "line-column@npm:1.0.2"
-  dependencies:
-    isarray: ^1.0.0
-    isobject: ^2.0.0
-  checksum: e6fa785b0c75c4485d0f181beaeb2f0b482ebf16921b64d5b61e75e86a61504b42053655d481b1c8de5c4d8b551473c034eb48780c65d76be377e643d395f6e5
-  languageName: node
-  linkType: hard
-
 "load-json-file@npm:^2.0.0":
   version: 2.0.0
   resolution: "load-json-file@npm:2.0.0"
@@ -5920,12 +5910,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.16":
-  version: 3.1.16
-  resolution: "nanoid@npm:3.1.16"
+"nanoid@npm:^3.1.23":
+  version: 3.1.23
+  resolution: "nanoid@npm:3.1.23"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 1903aa0a7602e881ef7015d4c8ccf8a2a92b45b1bd6c4bb9c1dd2119f41ebe08a44c9195ecf4c1fbaef147bd4d050e41adbcb747ec96d7d14c1f662e3ac52790
+  checksum: e6dea1da5a593ffdc8cf2676d1d02f0626f07a54a5947a7a1f5ff1fd07901b2f53044c285e98b87eb367f016fde285fd8785d54a2dceeab9c3721f4e618f8326
   languageName: node
   linkType: hard
 
@@ -6703,14 +6693,13 @@ fsevents@^1.2.7:
   linkType: hard
 
 "postcss@npm:^8.1.4":
-  version: 8.1.6
-  resolution: "postcss@npm:8.1.6"
+  version: 8.2.15
+  resolution: "postcss@npm:8.2.15"
   dependencies:
-    colorette: ^1.2.1
-    line-column: ^1.0.2
-    nanoid: ^3.1.16
+    colorette: ^1.2.2
+    nanoid: ^3.1.23
     source-map: ^0.6.1
-  checksum: f5cf0fdc7364cb3eeb2d3056cd68ef9e74ecbc8874481173491961c2bbe5c79967e71bace1457fafce87f5265da439b3ffb9f0834c9ffeaedcb6946c86026e66
+  checksum: 2d26bc29dedd7656d1f53fa002374a014a8c2c7b9f1538d0fafadb9eae2494f5b037c87de4390d620f622b31d7f15c8c8d88de2bd682e206104fb44e781737df
   languageName: node
   linkType: hard
 
