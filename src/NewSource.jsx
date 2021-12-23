@@ -12,10 +12,12 @@ function getNewSource({ leftData, rightData }) {
     return '';
   }
 
-  return JSON.stringify(Object.keys(leftData).reduce((obj, key) => ({
-    ...obj,
-    [key]: rightData[key] || '<missing>',
-  }), {}), null, 2);
+  const newSource = {};
+  Object.keys(leftData).forEach((key) => {
+    newSource[key] = rightData[key] || '<missing>';
+  });
+
+  return JSON.stringify(newSource, null, 2);
 }
 
 export default function NewSource({ left, right }) {
