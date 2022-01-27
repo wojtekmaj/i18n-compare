@@ -11,9 +11,7 @@ export default function Preview({ textSource }) {
       <h3>Preview</h3>
       <div className="Preview__body">
         <Suspense fallback={<p>Loading preview...</p>}>
-          <Markdown>
-            {textSource}
-          </Markdown>
+          <Markdown>{textSource}</Markdown>
         </Suspense>
       </div>
     </div>

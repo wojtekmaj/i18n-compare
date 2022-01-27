@@ -5,9 +5,7 @@ import './InputWrapper.less';
 import Input from './Input';
 import DragAndDrop from './DragAndDrop';
 
-export default function InputWrapper({
-  onChangeLeft, onChangeRight, valueLeft, valueRight,
-}) {
+export default function InputWrapper({ onChangeLeft, onChangeRight, valueLeft, valueRight }) {
   function onDnDChange(values) {
     onChangeLeft(values[0]);
     onChangeRight(values[1]);
@@ -19,31 +17,17 @@ export default function InputWrapper({
   }
 
   return (
-    <DragAndDrop
-      acceptOnlyNFiles={2}
-      onChange={onDnDChange}
-    >
+    <DragAndDrop acceptOnlyNFiles={2} onChange={onDnDChange}>
       <section className="InputWrapper">
         <div>
           <h2>Input</h2>
           <p>
-            Paste i18n files here.
-            {' '}
-            You can also drop one file on each field, or two files at the same time.
+            Paste i18n files here. You can also drop one file on each field, or two files at the
+            same time.
           </p>
         </div>
-        <Input
-          id="left"
-          label="Left"
-          onChange={onChangeLeft}
-          value={valueLeft}
-        />
-        <Input
-          id="right"
-          label="Right"
-          onChange={onChangeRight}
-          value={valueRight}
-        />
+        <Input id="left" label="Left" onChange={onChangeLeft} value={valueLeft} />
+        <Input id="right" label="Right" onChange={onChangeRight} value={valueRight} />
         <button
           type="button"
           className="InputWrapper__swapButton"

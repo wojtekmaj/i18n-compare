@@ -48,11 +48,9 @@ export default function Comparison({ left, right }) {
       return {};
     }
 
-    const extraKeys = Object.keys(rightData)
-      .filter((rightKey) => !(rightKey in leftData));
+    const extraKeys = Object.keys(rightData).filter((rightKey) => !(rightKey in leftData));
 
-    const missingKeys = Object.keys(leftData)
-      .filter((leftKey) => !(leftKey in rightData));
+    const missingKeys = Object.keys(leftData).filter((leftKey) => !(leftKey in rightData));
 
     return {
       extraKeys,
@@ -67,8 +65,8 @@ export default function Comparison({ left, right }) {
       <div>
         <h2>Comparison</h2>
         <p>
-          Use this data to verify differences. If file does not contain any extra keys and has
-          no missing keys, empty output will be produced.
+          Use this data to verify differences. If file does not contain any extra keys and has no
+          missing keys, empty output will be produced.
         </p>
       </div>
       <TextSource textSource={textSource} />

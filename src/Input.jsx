@@ -4,9 +4,7 @@ import './Input.less';
 
 import DragAndDrop from './DragAndDrop';
 
-export default function Input({
-  id, label, onChange, value,
-}) {
+export default function Input({ id, label, onChange, value }) {
   function onChangeInternal(event) {
     const { value: nextValue } = event.target;
 
@@ -18,10 +16,7 @@ export default function Input({
   }
 
   return (
-    <DragAndDrop
-      acceptOnlyNFiles={1}
-      onChange={onDnDChange}
-    >
+    <DragAndDrop acceptOnlyNFiles={1} onChange={onDnDChange}>
       <div className="Input">
         <h3>
           <label htmlFor={id}>{label}</label>

@@ -8,9 +8,7 @@ export default function TextSource({ textSource }) {
   return (
     <div className="TextSource">
       <h3>Source</h3>
-      <CopyButton text={textSource}>
-        Copy source
-      </CopyButton>
+      <CopyButton text={textSource}>Copy source</CopyButton>
       <textarea
         onFocus={(event) => {
           event.target.select();

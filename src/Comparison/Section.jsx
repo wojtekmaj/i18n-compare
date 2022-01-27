@@ -7,13 +7,9 @@ export default function Section({ keys, title }) {
 
   return (
     <>
-      ##
-      {' '}
-      {title}
+      ## {title}
       {'\n'}
-      {keys.map((key) => (
-        `* "\`${key}\`"\n`
-      ))}
+      {keys.map((key) => `* "\`${key}\`"\n`)}
       {'\n'}
     </>
   );

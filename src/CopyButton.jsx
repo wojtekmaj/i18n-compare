@@ -66,12 +66,7 @@ export default function CopyButton({
   }
 
   return (
-    <button
-      className="CopyButton"
-      type="button"
-      onClick={onClick}
-      disabled={copyState === true}
-    >
+    <button className="CopyButton" type="button" onClick={onClick} disabled={copyState === true}>
       {label}
     </button>
   );

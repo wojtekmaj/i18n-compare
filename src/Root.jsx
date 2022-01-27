@@ -22,14 +22,8 @@ export default function Root() {
           valueLeft={left}
           valueRight={right}
         />
-        <Comparison
-          left={left.trim()}
-          right={right.trim()}
-        />
-        <NewSource
-          left={left.trim()}
-          right={right.trim()}
-        />
+        <Comparison left={left.trim()} right={right.trim()} />
+        <NewSource left={left.trim()} right={right.trim()} />
       </main>
     </>
   );
