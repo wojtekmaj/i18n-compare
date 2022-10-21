@@ -1,6 +1,13 @@
+import { StrictMode } from 'react';
 import { render } from 'react-dom';
+
 import Root from './Root';
 
 import './index.less';
 
-render(<Root />, document.getElementById('react-root'));
+render(
+  <StrictMode>
+    <Root />
+  </StrictMode>,
+  document.getElementById('react-root'),
+);
