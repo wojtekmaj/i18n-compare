@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import mergeClassNames from 'merge-class-names';
+import clsx from 'clsx';
 
 import './DragAndDrop.less';
 
@@ -87,7 +87,7 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }) {
 
   return (
     <div
-      className={mergeClassNames('DragAndDrop', isActive && 'DragAndDrop--active')}
+      className={clsx('DragAndDrop', isActive && 'DragAndDrop--active')}
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
       onDrop={onDrop}
