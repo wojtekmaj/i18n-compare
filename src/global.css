@@ -41,18 +41,20 @@ button {
   border: 1px solid darkgray;
   border-radius: 4px;
   font: inherit;
+}
 
-  &:enabled {
-    cursor: pointer;
-  }
+button:enabled {
+  cursor: pointer;
 }
 
 section {
   display: grid;
   grid-column-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
 
-  @media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
+  section {
     grid-template-columns: repeat(2, minmax(400px, 1fr));
   }
 }

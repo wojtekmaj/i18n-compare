@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { renderToStaticMarkup } from 'react-dom/server';
 
-import './Comparison.less';
+import styles from './Comparison.module.css';
 
 import Section, { isKeys } from './Comparison/Section';
 import TextSource from './Comparison/TextSource';
@@ -61,7 +61,7 @@ export default function Comparison({ left, right }) {
   const textSource = getTextSource({ diffData });
 
   return (
-    <section className="Comparison">
+    <section className={styles.wrapper}>
       <div>
         <h2>Comparison</h2>
         <p>

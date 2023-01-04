@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-import './NewSource.less';
+import styles from './NewSource.module.css';
 
 import TextSource from './Comparison/TextSource';
 
@@ -27,7 +27,7 @@ export default function NewSource({ left, right }) {
   const newSource = getNewSource({ leftData, rightData });
 
   return (
-    <section className="NewSource">
+    <section className={styles.wrapper}>
       <div>
         <h2>New source</h2>
         <p>You can use this new source file to base your further translation work on.</p>

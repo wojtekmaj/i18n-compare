@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-import './InputWrapper.less';
-
 import getDebugValue from './__debug/getDebugValue';
 
 import InputWrapper from './InputWrapper';

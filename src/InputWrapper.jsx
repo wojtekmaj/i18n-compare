@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import './InputWrapper.less';
+import styles from './InputWrapper.module.css';
 
 import Input from './Input';
 import DragAndDrop from './DragAndDrop';
@@ -18,7 +18,7 @@ export default function InputWrapper({ onChangeLeft, onChangeRight, valueLeft, v
 
   return (
     <DragAndDrop acceptOnlyNFiles={2} onChange={onDnDChange}>
-      <section className="InputWrapper">
+      <section className={styles.wrapper}>
         <div>
           <h2>Input</h2>
           <p>
@@ -28,12 +28,7 @@ export default function InputWrapper({ onChangeLeft, onChangeRight, valueLeft, v
         </div>
         <Input id="left" label="Left" onChange={onChangeLeft} value={valueLeft} />
         <Input id="right" label="Right" onChange={onChangeRight} value={valueRight} />
-        <button
-          type="button"
-          className="InputWrapper__swapButton"
-          onClick={onSwap}
-          title="Swap outputs"
-        >
+        <button type="button" className={styles.swapButton} onClick={onSwap} title="Swap outputs">
           <span role="img" aria-label="Swap outputs">
             🔄
           </span>

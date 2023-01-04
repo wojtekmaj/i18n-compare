@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import './Input.less';
+import styles from './Input.module.css';
 
 import DragAndDrop from './DragAndDrop';
 
@@ -17,9 +17,11 @@ export default function Input({ id, label, onChange, value }) {
 
   return (
     <DragAndDrop acceptOnlyNFiles={1} onChange={onDnDChange}>
-      <div className="Input">
+      <div className={styles.wrapper}>
         <h3>
-          <label htmlFor={id}>{label}</label>
+          <label className={styles.label} htmlFor={id}>
+            {label}
+          </label>
         </h3>
         <textarea
           id={id}

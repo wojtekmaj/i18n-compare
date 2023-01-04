@@ -1,0 +1,44 @@
+.wrapper {
+}
+
+.body {
+  width: 100%;
+  padding: 15px;
+  overflow: visible;
+  border: 1px solid #c0d3eb;
+  border-radius: 3px;
+}
+
+.body:before {
+  content: '';
+  display: block;
+  height: 44px;
+  background-color: #f1f8ff;
+  border-bottom: 1px solid #c0d3eb;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin: -15px -15px 0;
+}
+
+.body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+}
+.body table {
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+.body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.body table th,
+.body table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
