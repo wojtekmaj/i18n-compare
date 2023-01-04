@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Preview.module.css';
 
-const Markdown = lazy(() => import(/* webpackChunkName: "react-markdown" */ './Markdown'));
+const Markdown = lazy(() => import('./Markdown'));
 
 export default function Preview({ textSource }) {
   return (
