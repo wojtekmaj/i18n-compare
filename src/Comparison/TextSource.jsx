@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-import styles from './TextSource.module.css';
+import { wrapper } from './TextSource.module.css';
 
 import CopyButton from '../CopyButton';
 
 export default function TextSource({ textSource }) {
   return (
-    <div className={styles.wrapper}>
+    <div className={wrapper}>
       <h3>Source</h3>
       <CopyButton text={textSource}>Copy source</CopyButton>
       <textarea

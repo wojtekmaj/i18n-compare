@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import styles from './DragAndDrop.module.css';
+import { wrapper, active } from './DragAndDrop.module.css';
 
 function readFileAsText(file) {
   const fileReader = new FileReader();
@@ -87,7 +87,7 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }) {
 
   return (
     <div
-      className={clsx(styles.wrapper, isActive && styles.active)}
+      className={clsx(wrapper, isActive && active)}
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
       onDrop={onDrop}

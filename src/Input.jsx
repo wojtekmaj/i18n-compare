@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import styles from './Input.module.css';
+import { wrapper } from './Input.module.css';
 
 import DragAndDrop from './DragAndDrop';
 
@@ -17,9 +17,9 @@ export default function Input({ id, label, onChange, value }) {
 
   return (
     <DragAndDrop acceptOnlyNFiles={1} onChange={onDnDChange}>
-      <div className={styles.wrapper}>
+      <div className={wrapper}>
         <h3>
-          <label className={styles.label} htmlFor={id}>
+          <label className={label} htmlFor={id}>
             {label}
           </label>
         </h3>
