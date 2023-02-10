@@ -5,10 +5,7 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 export default defineConfig({
   base: './',
   plugins: [
-    react({
-      // Use React plugin in all *.jsx and *.tsx files
-      include: '**/*.{jsx,tsx}',
-    }),
+    react(),
     createHtmlPlugin({
       minify: true,
     }),
