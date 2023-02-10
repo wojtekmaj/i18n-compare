@@ -38,8 +38,5 @@
     "vite": "^4.0.0",
     "vite-plugin-html": "^3.2.0"
   },
-  "resolutions": {
-    "semver@7.0.0": "^7.0.0"
-  },
   "packageManager": "yarn@3.1.0"
 }
