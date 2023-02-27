@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^3.0.0",
-    "eslint": "^8.26.0",
+    "eslint": "^8.35.0",
     "eslint-config-wojtekmaj": "^0.7.1",
     "husky": "^8.0.0",
     "prettier": "^2.7.0",
