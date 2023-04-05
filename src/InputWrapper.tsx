@@ -5,10 +5,22 @@ import { wrapper, swapButton } from './InputWrapper.module.css';
 import Input from './Input';
 import DragAndDrop from './DragAndDrop';
 
-export default function InputWrapper({ onChangeLeft, onChangeRight, valueLeft, valueRight }) {
-  function onDnDChange(values) {
-    onChangeLeft(values[0]);
-    onChangeRight(values[1]);
+type InputWrapperProps = {
+  onChangeLeft: (value: string) => void;
+  onChangeRight: (value: string) => void;
+  valueLeft: string;
+  valueRight: string;
+};
+
+export default function InputWrapper({
+  onChangeLeft,
+  onChangeRight,
+  valueLeft,
+  valueRight,
+}: InputWrapperProps) {
+  function onDnDChange(values: string[]) {
+    onChangeLeft(values[0] || '');
+    onChangeRight(values[1] || '');
   }
 
   function onSwap() {

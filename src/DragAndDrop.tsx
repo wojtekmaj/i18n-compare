@@ -4,27 +4,37 @@ import clsx from 'clsx';
 
 import { wrapper, active } from './DragAndDrop.module.css';
 
-function readFileAsText(file) {
-  const fileReader = new FileReader();
+function readFileAsText(file: File | null): Promise<string> {
+  return new Promise<string>((resolve, reject) => {
+    if (!file) {
+      reject(new Error('No file provided'));
+      return;
+    }
 
-  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
     fileReader.onerror = (error) => {
       fileReader.abort();
       reject(error);
     };
 
     fileReader.onload = () => {
-      resolve(fileReader.result);
+      resolve(fileReader.result as string);
     };
 
     fileReader.readAsText(file);
   });
 }
 
-export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }) {
+type DragAndDropProps = {
+  acceptOnlyNFiles?: number;
+  children: React.ReactNode;
+  onChange: (files: string[]) => void;
+};
+
+export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }: DragAndDropProps) {
   const [isActive, setIsActive] = useState(false);
 
-  function shouldReact(event) {
+  function shouldReact(event: React.DragEvent<HTMLDivElement>) {
     if (acceptOnlyNFiles && event.dataTransfer.items.length !== acceptOnlyNFiles) {
       return false;
     }
@@ -32,7 +42,7 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }) {
     return true;
   }
 
-  function onDragOver(event) {
+  function onDragOver(event: React.DragEvent<HTMLDivElement>) {
     if (!shouldReact(event)) {
       return;
     }
@@ -46,7 +56,7 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }) {
     setIsActive(false);
   }
 
-  function cleanupDrag(event) {
+  function cleanupDrag(event: React.DragEvent<HTMLDivElement>) {
     if (event.dataTransfer.items) {
       // Use DataTransferItemList interface to remove the drag data
       event.dataTransfer.items.clear();
@@ -58,7 +68,7 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }) {
     onDragLeave();
   }
 
-  function onDrop(event) {
+  function onDrop(event: React.DragEvent<HTMLDivElement>) {
     if (!shouldReact(event)) {
       return;
     }

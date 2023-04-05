@@ -7,8 +7,11 @@ import Comparison from './Comparison';
 import NewSource from './NewSource';
 
 export default function Root() {
-  const [left, setLeft] = useState(getDebugValue.next().value);
-  const [right, setRight] = useState(getDebugValue.next().value);
+  const [left, setLeft] = useState<string>(getDebugValue.next().value || '');
+  const [right, setRight] = useState<string>(getDebugValue.next().value || '');
+
+  const leftTrimmed = left?.trim();
+  const rightTrimmed = right?.trim();
 
   return (
     <>
@@ -20,8 +23,8 @@ export default function Root() {
           valueLeft={left}
           valueRight={right}
         />
-        <Comparison left={left.trim()} right={right.trim()} />
-        <NewSource left={left.trim()} right={right.trim()} />
+        <Comparison left={leftTrimmed} right={rightTrimmed} />
+        <NewSource left={leftTrimmed} right={rightTrimmed} />
       </main>
     </>
   );

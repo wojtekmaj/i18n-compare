@@ -5,7 +5,11 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 
-export default function Markdown({ children }) {
+type MarkdownProps = {
+  children: string;
+};
+
+export default function Markdown({ children }: MarkdownProps) {
   return (
     <ReactMarkdown rehypePlugins={[rehypeRaw, rehypeSanitize]}>
       {/* Have to change &shy; into <wbr /> as React-Markdown has issues rendering these */}
@@ -15,5 +19,5 @@ export default function Markdown({ children }) {
 }
 
 Markdown.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
 };
