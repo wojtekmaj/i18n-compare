@@ -10,13 +10,19 @@ import Preview from './Comparison/Preview';
 
 import parse from './utils/parse';
 
-const unescape = (html) => {
-  const el = document.createElement('textarea');
-  el.innerHTML = html;
-  return el.value;
+type DiffData = {
+  extraKeys?: string[];
+  missingKeys?: string[];
 };
 
-function renderSource({ diffData }) {
+function unescape(html: string) {
+  const el = document.createElement('textarea');
+  el.innerHTML = html;
+
+  return el.value;
+}
+
+function renderSource({ diffData }: { diffData: DiffData }) {
   const { missingKeys, extraKeys } = diffData;
 
   return (
@@ -34,16 +40,21 @@ renderSource.propTypes = {
   }),
 };
 
-function getTextSource({ diffData }) {
+function getTextSource({ diffData }: { diffData: DiffData }) {
   const source = renderSource({ diffData });
   return unescape(renderToStaticMarkup(source));
 }
 
-export default function Comparison({ left, right }) {
+type ComparisonProps = {
+  left: string;
+  right: string;
+};
+
+export default function Comparison({ left, right }: ComparisonProps) {
   const leftData = useMemo(() => parse(left), [left]);
   const rightData = useMemo(() => parse(right), [right]);
 
-  const diffData = useMemo(() => {
+  const diffData: DiffData = useMemo(() => {
     if (!leftData || !rightData) {
       return {};
     }

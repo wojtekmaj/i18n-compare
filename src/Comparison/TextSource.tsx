@@ -4,7 +4,11 @@ import { wrapper } from './TextSource.module.css';
 
 import CopyButton from '../CopyButton';
 
-export default function TextSource({ textSource }) {
+type TextSourceProps = {
+  textSource: string;
+};
+
+export default function TextSource({ textSource }: TextSourceProps) {
   return (
     <div className={wrapper}>
       <h3>Source</h3>
@@ -20,5 +24,5 @@ export default function TextSource({ textSource }) {
 }
 
 TextSource.propTypes = {
-  textSource: PropTypes.string,
+  textSource: PropTypes.string.isRequired,
 };

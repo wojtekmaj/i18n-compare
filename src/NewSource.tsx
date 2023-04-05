@@ -7,20 +7,33 @@ import TextSource from './Comparison/TextSource';
 
 import parse from './utils/parse';
 
-function getNewSource({ leftData, rightData }) {
+type Data = Record<string, string>;
+
+function getNewSource({
+  leftData,
+  rightData,
+}: {
+  leftData?: Data | null;
+  rightData?: Data | null;
+}) {
   if (!leftData || !rightData) {
     return '';
   }
 
-  const newSource = {};
+  const newSource: Data = {};
   Object.keys(leftData).forEach((key) => {
-    newSource[key] = rightData[key] || '<missing>';
+    newSource[key] = (key in rightData && rightData[key]) || '<missing>';
   });
 
   return JSON.stringify(newSource, null, 2);
 }
 
-export default function NewSource({ left, right }) {
+type NewSourceProps = {
+  left?: string;
+  right?: string;
+};
+
+export default function NewSource({ left, right }: NewSourceProps) {
   const leftData = useMemo(() => parse(left), [left]);
   const rightData = useMemo(() => parse(right), [right]);
 

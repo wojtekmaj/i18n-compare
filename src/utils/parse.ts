@@ -1,4 +1,4 @@
-export default function parse(str) {
+export default function parse(str?: string): Record<string, string> | null {
   if (!str) {
     return null;
   }

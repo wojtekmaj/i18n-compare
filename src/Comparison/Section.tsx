@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
 
-export default function Section({ keys, title }) {
+type SectionProps = {
+  keys?: string[];
+  title: string;
+};
+
+export default function Section({ keys, title }: SectionProps) {
   if (!keys || !keys.length) {
     return null;
   }
@@ -18,6 +23,6 @@ export default function Section({ keys, title }) {
 export const isKeys = PropTypes.arrayOf(PropTypes.string);
 
 Section.propTypes = {
-  keys: isKeys.isRequired,
-  title: PropTypes.string,
+  keys: isKeys,
+  title: PropTypes.string.isRequired,
 };

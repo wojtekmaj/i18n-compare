@@ -5,7 +5,11 @@ import { wrapper, body } from './Preview.module.css';
 
 const Markdown = lazy(() => import('./Markdown'));
 
-export default function Preview({ textSource }) {
+type PreviewProps = {
+  textSource: string;
+};
+
+export default function Preview({ textSource }: PreviewProps) {
   return (
     <div className={wrapper}>
       <h3>Preview</h3>
@@ -19,5 +23,5 @@ export default function Preview({ textSource }) {
 }
 
 Preview.propTypes = {
-  textSource: PropTypes.string,
+  textSource: PropTypes.string.isRequired,
 };

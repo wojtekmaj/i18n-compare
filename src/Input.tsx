@@ -4,15 +4,22 @@ import { wrapper } from './Input.module.css';
 
 import DragAndDrop from './DragAndDrop';
 
-export default function Input({ id, label, onChange, value }) {
-  function onChangeInternal(event) {
+type InputProps = {
+  id: string;
+  label: string;
+  onChange: (value: string) => void;
+  value: string;
+};
+
+export default function Input({ id, label, onChange, value }: InputProps) {
+  function onChangeInternal(event: React.ChangeEvent<HTMLTextAreaElement>) {
     const { value: nextValue } = event.target;
 
     onChange(nextValue);
   }
 
-  function onDnDChange([firstValue]) {
-    onChange(firstValue);
+  function onDnDChange([firstValue]: string[]) {
+    onChange(firstValue || '');
   }
 
   return (
@@ -38,6 +45,6 @@ export default function Input({ id, label, onChange, value }) {
 Input.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   value: PropTypes.string,
 };

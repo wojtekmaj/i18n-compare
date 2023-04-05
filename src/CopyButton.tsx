@@ -3,27 +3,32 @@ import PropTypes from 'prop-types';
 
 import { button } from './CopyButton.module.css';
 
-function fallbackCopy(text) {
+function fallbackCopy(text: string) {
   const textArea = document.createElement('textarea');
   textArea.value = text;
   textArea.style.position = 'fixed';
   document.body.appendChild(textArea);
   textArea.focus();
   textArea.select();
+
   const result = document.execCommand('copy');
+
   document.body.removeChild(textArea);
+
   if (!result) {
     throw new Error('execCommand failed');
   }
 }
 
-async function copy(text) {
+async function copy(text: string) {
   try {
     if (!navigator.clipboard) {
       throw new Error('Clipboard API not supported');
     }
 
-    const permission = await navigator.permissions.query({ name: 'clipboard-write' });
+    const permission = await navigator.permissions.query({
+      name: 'clipboard-write' as PermissionName,
+    });
 
     if (permission.state === 'granted' || permission.state === 'prompt') {
       await navigator.clipboard.writeText(text);
@@ -35,14 +40,22 @@ async function copy(text) {
   }
 }
 
+type CopyButtonProps = {
+  children?: React.ReactNode;
+  confirmationLabel?: React.ReactNode;
+  failureLabel?: React.ReactNode;
+  temporaryLabelTimeout?: number;
+  text: string;
+};
+
 export default function CopyButton({
   children,
   confirmationLabel,
   failureLabel,
   temporaryLabelTimeout,
   text,
-}) {
-  const [copyState, setCopyState] = useState(null);
+}: CopyButtonProps) {
+  const [copyState, setCopyState] = useState<boolean | null>(null);
 
   const label = useMemo(() => {
     if (copyState === null) {
