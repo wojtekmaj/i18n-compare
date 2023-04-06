@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
+import AsyncButton from '@wojtekmaj/react-async-button';
 
 import { button } from './CopyButton.module.css';
 
@@ -22,33 +22,31 @@ export default function CopyButton({
   temporaryLabelTimeout = 3000,
   text,
 }: CopyButtonProps) {
-  const [copyState, setCopyState] = useState<boolean | null>(null);
+  const successConfig = {
+    children: confirmationLabel,
+  };
 
-  const label = useMemo(() => {
-    if (copyState === null) {
-      return children;
-    }
+  const errorConfig = {
+    children: failureLabel,
+  };
 
-    return copyState ? confirmationLabel : failureLabel;
-  }, [children, copyState, confirmationLabel, failureLabel]);
-
-  async function onClick() {
-    const reset = () => setTimeout(() => setCopyState(null), temporaryLabelTimeout);
-
-    try {
-      copyToClipboard(text);
-      setCopyState(true);
-    } catch (error) {
-      setCopyState(false);
-    } finally {
-      reset();
-    }
+  function onClick() {
+    copyToClipboard(text);
   }
 
   return (
-    <button className={button} type="button" onClick={onClick} disabled={copyState === true}>
-      {label}
-    </button>
+    <>
+      <AsyncButton
+        className={button}
+        errorConfig={errorConfig}
+        onClick={onClick}
+        resetTimeout={temporaryLabelTimeout}
+        successConfig={successConfig}
+        type="button"
+      >
+        {children}
+      </AsyncButton>
+    </>
   );
 }
 
