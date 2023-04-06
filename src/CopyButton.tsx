@@ -16,10 +16,10 @@ type CopyButtonProps = {
 };
 
 export default function CopyButton({
-  children,
-  confirmationLabel,
-  failureLabel,
-  temporaryLabelTimeout,
+  children = 'Copy',
+  confirmationLabel = 'Copied!',
+  failureLabel = 'Failed to copy',
+  temporaryLabelTimeout = 3000,
   text,
 }: CopyButtonProps) {
   const [copyState, setCopyState] = useState<boolean | null>(null);
@@ -51,13 +51,6 @@ export default function CopyButton({
     </button>
   );
 }
-
-CopyButton.defaultProps = {
-  children: 'Copy',
-  confirmationLabel: 'Copied!',
-  failureLabel: 'Failed to copy',
-  temporaryLabelTimeout: 3000,
-};
 
 CopyButton.propTypes = {
   children: PropTypes.node,
