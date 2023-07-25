@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import ReactMarkdown from 'react-markdown';
 
 import rehypeRaw from 'rehype-raw';
@@ -17,7 +15,3 @@ export default function Markdown({ children }: MarkdownProps) {
     </ReactMarkdown>
   );
 }
-
-Markdown.propTypes = {
-  children: PropTypes.string.isRequired,
-};

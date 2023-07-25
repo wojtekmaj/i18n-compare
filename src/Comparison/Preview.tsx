@@ -1,5 +1,4 @@
 import { lazy, Suspense } from 'react';
-import PropTypes from 'prop-types';
 
 import { wrapper, body } from './Preview.module.css';
 
@@ -21,7 +20,3 @@ export default function Preview({ textSource }: PreviewProps) {
     </div>
   );
 }
-
-Preview.propTypes = {
-  textSource: PropTypes.string.isRequired,
-};

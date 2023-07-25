@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 type SectionProps = {
   keys?: string[];
   title: string;
@@ -19,10 +17,3 @@ export default function Section({ keys, title }: SectionProps) {
     </>
   );
 }
-
-export const isKeys = PropTypes.arrayOf(PropTypes.string);
-
-Section.propTypes = {
-  keys: isKeys,
-  title: PropTypes.string.isRequired,
-};

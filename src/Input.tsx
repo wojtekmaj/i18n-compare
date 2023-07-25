@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import { wrapper } from './Input.module.css';
 
 import DragAndDrop from './DragAndDrop';
@@ -41,10 +39,3 @@ export default function Input({ id, label, onChange, value }: InputProps) {
     </DragAndDrop>
   );
 }
-
-Input.propTypes = {
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string,
-};

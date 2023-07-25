@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import { wrapper, swapButton } from './InputWrapper.module.css';
 
 import Input from './Input';
@@ -49,10 +47,3 @@ export default function InputWrapper({
     </DragAndDrop>
   );
 }
-
-InputWrapper.propTypes = {
-  onChangeLeft: PropTypes.func.isRequired,
-  onChangeRight: PropTypes.func.isRequired,
-  valueLeft: PropTypes.string,
-  valueRight: PropTypes.string,
-};

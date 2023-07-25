@@ -1,10 +1,9 @@
 import { useMemo } from 'react';
-import PropTypes from 'prop-types';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import { wrapper } from './Comparison.module.css';
 
-import Section, { isKeys } from './Comparison/Section';
+import Section from './Comparison/Section';
 import TextSource from './Comparison/TextSource';
 import Preview from './Comparison/Preview';
 
@@ -32,13 +31,6 @@ function renderSource({ diffData }: { diffData: DiffData }) {
     </>
   );
 }
-
-renderSource.propTypes = {
-  diffData: PropTypes.shape({
-    extraKeys: isKeys,
-    missingKeys: isKeys,
-  }),
-};
 
 function getTextSource({ diffData }: { diffData: DiffData }) {
   const source = renderSource({ diffData });
@@ -85,8 +77,3 @@ export default function Comparison({ left, right }: ComparisonProps) {
     </section>
   );
 }
-
-Comparison.propTypes = {
-  left: PropTypes.string,
-  right: PropTypes.string,
-};

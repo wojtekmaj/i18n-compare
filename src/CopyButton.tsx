@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import AsyncButton from '@wojtekmaj/react-async-button';
 
 import { button } from './CopyButton.module.css';
@@ -49,11 +48,3 @@ export default function CopyButton({
     </>
   );
 }
-
-CopyButton.propTypes = {
-  children: PropTypes.node,
-  confirmationLabel: PropTypes.node,
-  failureLabel: PropTypes.node,
-  temporaryLabelTimeout: PropTypes.number,
-  text: PropTypes.string.isRequired,
-};

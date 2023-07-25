@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { wrapper, active } from './DragAndDrop.module.css';
@@ -106,9 +105,3 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }: Dr
     </div>
   );
 }
-
-DragAndDrop.propTypes = {
-  acceptOnlyNFiles: PropTypes.number,
-  children: PropTypes.node,
-  onChange: PropTypes.func,
-};

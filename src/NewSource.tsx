@@ -1,5 +1,4 @@
 import { useMemo } from 'react';
-import PropTypes from 'prop-types';
 
 import { wrapper } from './NewSource.module.css';
 
@@ -49,8 +48,3 @@ export default function NewSource({ left, right }: NewSourceProps) {
     </section>
   );
 }
-
-NewSource.propTypes = {
-  left: PropTypes.string,
-  right: PropTypes.string,
-};

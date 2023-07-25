@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import { wrapper } from './TextSource.module.css';
 
 import CopyButton from '../CopyButton';
@@ -22,7 +20,3 @@ export default function TextSource({ textSource }: TextSourceProps) {
     </div>
   );
 }
-
-TextSource.propTypes = {
-  textSource: PropTypes.string.isRequired,
-};
