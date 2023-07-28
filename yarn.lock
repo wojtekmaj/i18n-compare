@@ -992,16 +992,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wojtekmaj/react-async-button@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@wojtekmaj/react-async-button@npm:1.2.1"
+"@wojtekmaj/react-async-button@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "@wojtekmaj/react-async-button@npm:1.5.1"
   dependencies:
-    "@types/react": "*"
-    make-cancellable-promise: ^1.2.0
+    make-cancellable-promise: ^1.3.1
     prop-types: ^15.6.0
   peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 81e973cc09273e222370eb0a02cbcce6268dbd810e04308b6aca260de0cec2908a6a84994ed0a373e9232de908ccc21d55945a87bc118876ad3265fee42be5c5
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 7b4b2c56e4210aab2d2e9f799b5bee7a0c62fa977b2983a5a0878ae7abc66a5eae38f4c9871c3439b1f6fc7e31ed54ef4a3742129e1ccb211bd749b6f5bee1ad
   languageName: node
   linkType: hard
 
@@ -3176,7 +3179,7 @@ __metadata:
     "@types/react": "*"
     "@types/react-dom": "*"
     "@vitejs/plugin-react": ^3.0.0
-    "@wojtekmaj/react-async-button": ^1.2.1
+    "@wojtekmaj/react-async-button": ^1.5.1
     clsx: ^2.0.0
     eslint: ^8.26.0
     eslint-config-wojtekmaj: ^0.9.0
@@ -3886,10 +3889,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-cancellable-promise@npm:^1.2.0":
-  version: 1.2.1
-  resolution: "make-cancellable-promise@npm:1.2.1"
-  checksum: 57570edc22e949e7e68cd8422f19ad912d35223c85e0f79a329696014ecdb8076b03d960e4df858ffb5dbc6a92de09a90ba0ac020e1eca6bd8eb7c683722b3b0
+"make-cancellable-promise@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "make-cancellable-promise@npm:1.3.1"
+  checksum: f7ca52cdf6f22381600406c05a332e776bf9b71085d17e62a5f9860351de4fc696a9ed03e7bfdd36d3058c0307d33e97166bc210f5e8c842921a92986158361d
   languageName: node
   linkType: hard
 
