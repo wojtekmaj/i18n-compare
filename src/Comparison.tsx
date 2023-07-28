@@ -3,11 +3,11 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import { wrapper } from './Comparison.module.css';
 
-import Section from './Comparison/Section';
-import TextSource from './Comparison/TextSource';
-import Preview from './Comparison/Preview';
+import Section from './Comparison/Section.js';
+import TextSource from './Comparison/TextSource.js';
+import Preview from './Comparison/Preview.js';
 
-import parse from './utils/parse';
+import parse from './utils/parse.js';
 
 type DiffData = {
   extraKeys?: string[];

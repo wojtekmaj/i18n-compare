@@ -1,7 +1,7 @@
 import { wrapper, swapButton } from './InputWrapper.module.css';
 
-import Input from './Input';
-import DragAndDrop from './DragAndDrop';
+import Input from './Input.js';
+import DragAndDrop from './DragAndDrop.js';
 
 type InputWrapperProps = {
   onChangeLeft: (value: string) => void;

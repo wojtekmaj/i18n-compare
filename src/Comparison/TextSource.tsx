@@ -1,6 +1,6 @@
 import { wrapper } from './TextSource.module.css';
 
-import CopyButton from '../CopyButton';
+import CopyButton from '../CopyButton.js';
 
 type TextSourceProps = {
   textSource: string;

@@ -2,9 +2,9 @@ import { useMemo } from 'react';
 
 import { wrapper } from './NewSource.module.css';
 
-import TextSource from './Comparison/TextSource';
+import TextSource from './Comparison/TextSource.js';
 
-import parse from './utils/parse';
+import parse from './utils/parse.js';
 
 type Data = Record<string, string>;
 

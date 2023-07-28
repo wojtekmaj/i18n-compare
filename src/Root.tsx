@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-import getDebugValue from './__debug/getDebugValue';
+import getDebugValue from './__debug/getDebugValue.js';
 
-import InputWrapper from './InputWrapper';
-import Comparison from './Comparison';
-import NewSource from './NewSource';
+import InputWrapper from './InputWrapper.js';
+import Comparison from './Comparison.js';
+import NewSource from './NewSource.js';
 
 export default function Root() {
   const [left, setLeft] = useState<string>(getDebugValue.next().value || '');

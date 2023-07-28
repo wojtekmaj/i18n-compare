@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 
 import { wrapper, body } from './Preview.module.css';
 
-const Markdown = lazy(() => import('./Markdown'));
+const Markdown = lazy(() => import('./Markdown.js'));
 
 type PreviewProps = {
   textSource: string;

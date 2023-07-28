@@ -1,6 +1,6 @@
 import { wrapper } from './Input.module.css';
 
-import DragAndDrop from './DragAndDrop';
+import DragAndDrop from './DragAndDrop.js';
 
 type InputProps = {
   id: string;
