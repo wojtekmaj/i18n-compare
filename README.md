@@ -1,4 +1,4 @@
-[![CI](https://github.com/wojtekmaj/i18n-compare/workflows/CI/badge.svg)](https://github.com/wojtekmaj/i18n-compare/actions)
+[![CI](https://github.com/wojtekmaj/i18n-compare/actions/workflows/ci.yml/badge.svg)](https://github.com/wojtekmaj/i18n-compare/actions)
 
 # i18n-compare
 
