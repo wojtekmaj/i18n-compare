@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { createHtmlPlugin } from 'vite-plugin-html';
+import simpleHtmlPlugin from 'vite-plugin-simple-html';
 
 export default defineConfig({
   base: './',
   plugins: [
     react(),
-    createHtmlPlugin({
+    simpleHtmlPlugin({
       minify: true,
     }),
   ],
