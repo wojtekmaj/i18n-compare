@@ -5,7 +5,13 @@ import Root from './Root.js';
 
 import './global.css';
 
-createRoot(document.getElementById('react-root') as HTMLDivElement).render(
+const root = document.getElementById('root');
+
+if (!root) {
+  throw new Error('Could not find root element');
+}
+
+createRoot(root).render(
   <StrictMode>
     <Root />
   </StrictMode>,
