@@ -34,17 +34,15 @@ export default function CopyButton({
   }
 
   return (
-    <>
-      <AsyncButton
-        className={button}
-        errorConfig={errorConfig}
-        onClick={onClick}
-        resetTimeout={temporaryLabelTimeout}
-        successConfig={successConfig}
-        type="button"
-      >
-        {children}
-      </AsyncButton>
-    </>
+    <AsyncButton
+      className={button}
+      errorConfig={errorConfig}
+      onClick={onClick}
+      resetTimeout={temporaryLabelTimeout}
+      successConfig={successConfig}
+      type="button"
+    >
+      {children}
+    </AsyncButton>
   );
 }
