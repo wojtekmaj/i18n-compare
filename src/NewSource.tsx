@@ -20,9 +20,9 @@ function getNewSource({
   }
 
   const newSource: Data = {};
-  Object.keys(leftData).forEach((key) => {
+  for (const key of Object.keys(leftData)) {
     newSource[key] = (key in rightData && rightData[key]) || '<missing>';
-  });
+  }
 
   return JSON.stringify(newSource, null, 2);
 }
