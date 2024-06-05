@@ -14,7 +14,7 @@ type DiffData = {
   missingKeys?: string[];
 };
 
-function unescape(html: string) {
+function unescapeHtml(html: string) {
   const el = document.createElement('textarea');
   el.innerHTML = html;
 
@@ -34,7 +34,7 @@ function renderSource({ diffData }: { diffData: DiffData }) {
 
 function getTextSource({ diffData }: { diffData: DiffData }) {
   const source = renderSource({ diffData });
-  return unescape(renderToStaticMarkup(source));
+  return unescapeHtml(renderToStaticMarkup(source));
 }
 
 type ComparisonProps = {
