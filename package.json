@@ -19,6 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@biomejs/biome": "^1.8.0",
     "@wojtekmaj/react-async-button": "^1.5.1",
     "clsx": "^2.0.0",
     "react": "^18.2.0",
