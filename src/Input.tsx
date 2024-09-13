@@ -1,5 +1,3 @@
-import { wrapper } from './Input.module.css';
-
 import DragAndDrop from './DragAndDrop.js';
 
 type InputProps = {
@@ -22,7 +20,7 @@ export default function Input({ id, label, onChange, value }: InputProps) {
 
   return (
     <DragAndDrop acceptOnlyNFiles={1} onChange={onDnDChange}>
-      <div className={wrapper}>
+      <div>
         <h3>
           <label className={label} htmlFor={id}>
             {label}

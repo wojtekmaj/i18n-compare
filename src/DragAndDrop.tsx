@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import clsx from 'clsx';
 
-import { wrapper, active } from './DragAndDrop.module.css';
+import { active } from './DragAndDrop.module.css';
 
 function readFileAsText(file: File | null): Promise<string> {
   return new Promise<string>((resolve, reject) => {
@@ -96,7 +96,7 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }: Dr
 
   return (
     <div
-      className={clsx(wrapper, isActive && active)}
+      className={clsx(isActive && active)}
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
       onDrop={onDrop}

@@ -39,9 +39,7 @@ export default function InputWrapper({
         <Input id="left" label="Left" onChange={onChangeLeft} value={valueLeft} />
         <Input id="right" label="Right" onChange={onChangeRight} value={valueRight} />
         <button type="button" className={swapButton} onClick={onSwap} title="Swap outputs">
-          <span role="img" aria-label="Swap outputs">
-            🔄
-          </span>
+          <span aria-label="Swap outputs">🔄</span>
         </button>
       </section>
     </DragAndDrop>

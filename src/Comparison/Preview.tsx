@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 
-import { wrapper, body } from './Preview.module.css';
+import { body } from './Preview.module.css';
 
 const Markdown = lazy(() => import('./Markdown.js'));
 
@@ -10,7 +10,7 @@ type PreviewProps = {
 
 export default function Preview({ textSource }: PreviewProps) {
   return (
-    <div className={wrapper}>
+    <div>
       <h3>Preview</h3>
       <div className={body}>
         <Suspense fallback={<p>Loading preview...</p>}>
