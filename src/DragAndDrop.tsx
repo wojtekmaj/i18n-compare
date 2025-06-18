@@ -95,6 +95,7 @@ export default function DragAndDrop({ acceptOnlyNFiles, children, onChange }: Dr
   }
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: This element is designed for mouse users only
     <div
       className={clsx(isActive && active)}
       onDragOver={onDragOver}

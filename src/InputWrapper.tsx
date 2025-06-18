@@ -2,6 +2,7 @@ import { wrapper, swapButton } from './InputWrapper.module.css';
 
 import Input from './Input.js';
 import DragAndDrop from './DragAndDrop.js';
+import { useId } from 'react';
 
 type InputWrapperProps = {
   onChangeLeft: (value: string) => void;
@@ -16,6 +17,9 @@ export default function InputWrapper({
   valueLeft,
   valueRight,
 }: InputWrapperProps) {
+  const leftId = useId();
+  const rightId = useId();
+
   function onDnDChange(values: string[]) {
     onChangeLeft(values[0] || '');
     onChangeRight(values[1] || '');
@@ -36,10 +40,12 @@ export default function InputWrapper({
             same time.
           </p>
         </div>
-        <Input id="left" label="Left" onChange={onChangeLeft} value={valueLeft} />
-        <Input id="right" label="Right" onChange={onChangeRight} value={valueRight} />
+        <Input id={leftId} label="Left" onChange={onChangeLeft} value={valueLeft} />
+        <Input id={rightId} label="Right" onChange={onChangeRight} value={valueRight} />
         <button type="button" className={swapButton} onClick={onSwap} title="Swap outputs">
-          <span aria-label="Swap outputs">🔄</span>
+          <span aria-label="Swap outputs" role="img">
+            🔄
+          </span>
         </button>
       </section>
     </DragAndDrop>
