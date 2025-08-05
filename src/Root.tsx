@@ -1,9 +1,8 @@
 import { useState } from 'react';
 
 import getDebugValue from './__debug/getDebugValue.js';
-
-import InputWrapper from './InputWrapper.js';
 import Comparison from './Comparison.js';
+import InputWrapper from './InputWrapper.js';
 import NewSource from './NewSource.js';
 
 export default function Root() {

@@ -3,9 +3,9 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import { wrapper } from './Comparison.module.css';
 
+import Preview from './Comparison/Preview.js';
 import Section from './Comparison/Section.js';
 import TextSource from './Comparison/TextSource.js';
-import Preview from './Comparison/Preview.js';
 
 import parse from './utils/parse.js';
 
