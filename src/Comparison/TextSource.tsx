@@ -15,6 +15,7 @@ export default function TextSource({ textSource }: TextSourceProps) {
         onFocus={(event) => {
           event.target.select();
         }}
+        readOnly
         value={textSource}
       />
     </div>
