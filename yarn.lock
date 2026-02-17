@@ -985,19 +985,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wojtekmaj/react-async-button@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "@wojtekmaj/react-async-button@npm:1.5.1"
+"@wojtekmaj/react-async-button@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@wojtekmaj/react-async-button@npm:3.0.0"
   dependencies:
-    make-cancellable-promise: "npm:^1.3.1"
-    prop-types: "npm:^15.6.0"
+    make-cancellable-promise: "npm:^2.0.0"
   peerDependencies:
-    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/155f1d837a1e540138602a44ee3fa459065ac44a2c600e20c2ec396d96920fabe338ab504a4626e2e455eb0b5659f7d9374cf76ca82719b897fad6d9578a39d5
+  checksum: 10c0/091c0135373955fff54e9ae119d96e62b412de89bf5cd59c4960755197d36a269b0f89b87814efa66e1b29f11ff5f271ac22c9b610286f8e1901cd32a516ac84
   languageName: node
   linkType: hard
 
@@ -1538,7 +1537,7 @@ __metadata:
     "@types/react": "npm:*"
     "@types/react-dom": "npm:*"
     "@vitejs/plugin-react": "npm:^4.6.0"
-    "@wojtekmaj/react-async-button": "npm:^1.5.1"
+    "@wojtekmaj/react-async-button": "npm:^3.0.0"
     clsx: "npm:^2.0.0"
     husky: "npm:^9.0.0"
     react: "npm:^18.2.0"
@@ -1765,10 +1764,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-cancellable-promise@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "make-cancellable-promise@npm:1.3.1"
-  checksum: 10c0/82d0c81640f0f66f3fb1e2f448f6e05643d6f2e44b2772be75d79e9dd79ee21dfa803ebddcf4452e7852515a16c9da8ef3e1b6161e0458ed2069146cde586add
+"make-cancellable-promise@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "make-cancellable-promise@npm:2.0.0"
+  checksum: 10c0/e9d76281ea0005001c3de95d26ea6cd508f44ffd8fa2e19193b92d1e8bc03cf75f87750baec6de3dd032b12f8b747ba88fef3328309fe005dbbdd56ce70617c6
   languageName: node
   linkType: hard
 
@@ -2294,7 +2293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.0.0, prop-types@npm:^15.6.0":
+"prop-types@npm:^15.0.0":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
