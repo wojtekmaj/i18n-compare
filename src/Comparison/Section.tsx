@@ -4,7 +4,7 @@ type SectionProps = {
 };
 
 export default function Section({ keys, title }: SectionProps) {
-  if (!keys || !keys.length) {
+  if (!keys?.length) {
     return null;
   }
 
